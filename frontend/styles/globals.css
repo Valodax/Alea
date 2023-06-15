@@ -7,10 +7,18 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #7dd3fc;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+body {
+  color: #e7e8e8;
+  background: #0f1318;
 }
