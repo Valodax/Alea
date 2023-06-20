@@ -1,0 +1,29 @@
+@keyframes spinBall {
+    0% {
+        transform: translate(-50%, -50%) rotate(-90deg) translate(1340%);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(270deg) translate(1340%);
+    }
+}
+
+.ball {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: spinBall 2.5s linear infinite;
+    z-index: 1;
+}
+
+.spin {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
