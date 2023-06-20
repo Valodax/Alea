@@ -1,9 +1,9 @@
 @keyframes spinBall {
     0% {
-        transform: translate(-50%, -50%) rotate(-90deg) translate(1340%);
+        transform: translate(-50%, -50%) rotate(-90deg) translate(1566%);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(270deg) translate(1340%);
+        transform: translate(-50%, -50%) rotate(270deg) translate(1566%);
     }
 }
 
