@@ -21,7 +21,7 @@
     height: 100%;
     object-fit: cover;
     animation: spin 10s linear infinite;
-    z-index: 20;
+    z-index: 2;
 }
 
 .ball {
@@ -31,5 +31,5 @@
     top: 50%;
     translate: translate(-50%, -50%);
     animation: spinBall 2.5s linear infinite;
-    z-index: 100;
+    z-index: 3;
 }

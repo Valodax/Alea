@@ -18,6 +18,16 @@ const Roulette: NextPage = () => {
     return (
         <div className="flex flex-col h-screen justify-center items-center overflow-x-hidden">
             <Header />
+            <div className="pb-6">
+                <button
+                    className={`z-10 bg-black text-4xl text-light-gray px-8 pt-3 pb-5 font-semibold rounded-2xl shadow-lg hover:bg-gray-800 ${
+                        showBall ? "opacity-0 pointer-events-none" : ""
+                    }`}
+                    onClick={handleClick}
+                >
+                    Spin the wheel
+                </button>
+            </div>
             <div className="w-full relative">
                 <RouletteTable />
                 <div className="absolute top-0 w-full h-full flex">
@@ -29,16 +39,6 @@ const Roulette: NextPage = () => {
                     <div className="flex-1"></div>
                 </div>
             </div>
-            {showBall ? (
-                ""
-            ) : (
-                <button
-                    className="absolute right-0 bg-black text-light-gray px-5 py-3 font-semibold rounded-2xl shadow-lg hover:bg-gray-800"
-                    onClick={handleClick}
-                >
-                    Spin!
-                </button>
-            )}
         </div>
     );
 };
