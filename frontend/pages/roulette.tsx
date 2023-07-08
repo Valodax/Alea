@@ -16,7 +16,7 @@ const Roulette: NextPage = () => {
     };
 
     return (
-        <div className="flex flex-col h-screen justify-center items-center overflow-x-hidden">
+        <div className="flex flex-col h-screen justify-center items-center ">
             <Header />
             <div className="pb-6">
                 <button
