@@ -5,6 +5,7 @@ pragma solidity ^0.8.18;
 import {ConfirmedOwner} from "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 
 contract Vault is ConfirmedOwner {
+    mapping(address => uint256) public balances;
     mapping(address => bool) public registeredContracts;
 
     constructor() ConfirmedOwner(msg.sender) {}
@@ -25,10 +26,15 @@ contract Vault is ConfirmedOwner {
         registeredContracts[contractAddress] = false;
     }
 
+    function deposit() public payable {
+        balances[msg.sender] += msg.value;
+    }
+
     function transfer(
         uint256 amount,
-        address payable toAddress
-    ) public onlyRegisteredContracts {
+        address toAddress
+    ) external onlyRegisteredContracts {
+        require(address(this).balance >= amount, "Not enough balance");
         (bool success, ) = toAddress.call{value: amount}("");
         require(success, "Transfer failed");
     }
